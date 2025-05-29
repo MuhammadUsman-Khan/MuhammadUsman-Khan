@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on Python & its libraries like Numpy, Pandas, Tensorflow<br>🌱 I’m currently learning Machine Learning, Chatbot Development<br>💬 Ask me about Programming Logics<br>📫 How to reach me usmankhan92a@gmail.com<br>
+🔭 I’m currently working on Python & its libraries like Numpy, Pandas, Tensorflow, Scikit-Learn<br>🌱 I’m currently learning Machine Learning, Chatbot Development<br>💬 Ask me about Programming Logics<br>📫 How to reach me usmankhan92a@gmail.com<br>
 
 
 ## 🌐 Socials:
