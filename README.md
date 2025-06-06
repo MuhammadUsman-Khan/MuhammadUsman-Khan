@@ -1,8 +1,13 @@
 # 💫 About Me:
-🔭 I’m currently working with Python and its libraries including NumPy, Pandas, TensorFlow, Scikit-learn, Matplotlib, and Seaborn.  
-🌱 I’m actively learning Machine Learning and Chatbot Development, and building basic ML projects to apply my knowledge.  
-💡 I enjoy solving logical programming problems and exploring real-world applications of AI.  
-💬 Ask me about Python programming, logic building, and beginner-friendly ML workflows.  
+
+🔭 I’m currently working with **Python** and its libraries including **NumPy**, **Pandas**, **TensorFlow**, **Scikit-learn**, **Matplotlib**, and **Seaborn**.  
+
+🌱 I’m actively learning **Machine Learning** and **Chatbot Development**, and building basic *ML projects* to apply my knowledge.  
+
+💡 I enjoy solving logical programming problems and exploring real-world applications of **AI**.  
+
+💬 Ask me about **Python programming**, **logic building**, and beginner-friendly **ML workflows**.  
+
 📫 Reach me at: [usmankhan92a@gmail.com](mailto:usmankhan92a@gmail.com)
 
 ## 🌐 Socials:
