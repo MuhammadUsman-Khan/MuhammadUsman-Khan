@@ -1,6 +1,9 @@
 # 💫 About Me:
-🔭 I’m currently working on Python & its libraries like Numpy, Pandas, Tensorflow, Scikit-Learn<br>🌱 I’m currently learning Machine Learning, Chatbot Development<br>💬 Ask me about Programming Logics<br>📫 How to reach me usmankhan92a@gmail.com<br>
-
+🔭 I’m currently working with Python and its libraries including NumPy, Pandas, TensorFlow, Scikit-learn, Matplotlib, and Seaborn.  
+🌱 I’m actively learning Machine Learning and Chatbot Development, and building basic ML projects to apply my knowledge.  
+💡 I enjoy solving logical programming problems and exploring real-world applications of AI.  
+💬 Ask me about Python programming, logic building, and beginner-friendly ML workflows.  
+📫 Reach me at: [usmankhan92a@gmail.com](mailto:usmankhan92a@gmail.com)
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/us_man_._) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/muhammad-usman-khan-bb3607336) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:usmankhan92a@gmail.com) 
