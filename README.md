@@ -8,7 +8,7 @@
 
 💬 Ask me about **Python programming**, **logic building**, and beginner-friendly **ML workflows**.  
 
-📫 Reach me at: [usmankhan92a@gmail.com](mailto:usmankhan92a@gmail.com)
+📫 Reach me at: [m.usman.khan.stu@gmail.com](mailto:m.usman.khan.stu@gmail.com)
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/us_man_._) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/muhammad-usman-khan-bb3607336) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:usmankhan92a@gmail.com) 
