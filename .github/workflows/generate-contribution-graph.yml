@@ -2,7 +2,7 @@ name: Generate Contribution Graph
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Runs daily at 00:00 UTC
+    - cron: "0 0 * * *"   # daily at midnight
   workflow_dispatch:
 
 jobs:
@@ -10,46 +10,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout the repository
+      # 1. Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Needed for Git commit & push
 
-      # 2️⃣ Setup Node (required by lowlighter plugin)
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-
-      # 3️⃣ Generate GitHub contribution SVG
-      - name: Generate Contribution Graph SVG
+      # 2. Generate GitHub Contribution SVG
+      - name: Generate Contribution Graph
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: MuhammadUsman-Khan
           template: classic
-          base: ""
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-          config_timezone: Asia/Karachi
           config_display: large
-          config_animations: false  # Disable animations for static SVG
-          config_output: contribution-graph.svg  # Explicit output filename
+          config_timezone: Asia/Karachi
+          config_theme: dark
+          config_output: contribution-graph.svg
 
-      # 4️⃣ Configure Git
-      - name: Setup Git
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+      # 3. Debug: List files to verify SVG exists
+      - name: List repository files
+        run: ls -R
 
-      # 5️⃣ Add and commit changes only if they exist
-      - name: Commit contribution graph if changed
+      # 4. Commit and push only if file exists
+      - name: Commit contribution graph if exists
         run: |
-          git add contribution-graph.svg
-          if ! git diff --cached --quiet; then
-            git commit -m "Update contribution graph"
-            git push origin HEAD
+          if [ -f contribution-graph.svg ]; then
+            git config --global user.name "github-actions"
+            git config --global user.email "github-actions@github.com"
+            git add contribution-graph.svg
+            if ! git diff --cached --quiet; then
+              git commit -m "Update contribution graph"
+              git push origin HEAD
+            else
+              echo "No changes to commit"
+            fi
           else
-            echo "No changes to commit"
+            echo "SVG file not found, skipping commit"
           fi
