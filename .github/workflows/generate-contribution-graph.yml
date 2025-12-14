@@ -14,17 +14,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Generate GitHub Contribution SVG
+      # 2. Generate Contribution Graph (classic template only)
       - name: Generate Contribution Graph
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: MuhammadUsman-Khan
-          template: classic
+          template: classic          # classic template = contribution graph only
           config_display: large
           config_timezone: Asia/Karachi
-          config_theme: dark
           config_output: contribution-graph.svg
+          config_theme: dark
+          config_animations: false    # disables any animation
+          # Do NOT include plugins like:
+          # plugin_stars, plugin_languages, plugin_habits, plugin_repositories, etc.
 
       # 3. Debug: List files to verify SVG exists
       - name: List repository files
@@ -45,4 +48,3 @@ jobs:
             fi
           else
             echo "SVG file not found, skipping commit"
-          fi
