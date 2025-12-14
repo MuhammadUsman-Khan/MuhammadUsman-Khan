@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repository
+      # 1. Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Generate Contribution Graph (classic template only)
+      # 2. Generate GitHub Contribution SVG (green boxes only)
       - name: Generate Contribution Graph
         uses: lowlighter/metrics@latest
         with:
@@ -23,8 +23,9 @@ jobs:
           template: classic
           config_display: large
           config_timezone: Asia/Karachi
-          config_animations: false
-          filename: contribution-graph.svg
+          config_output: contribution-graph.svg
+          config_theme: dark
+          config_animations: false   # disables any animation
 
       # 3. Debug: List files to verify SVG exists
       - name: List repository files
