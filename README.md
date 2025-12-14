@@ -14,9 +14,9 @@
 
 ## 📊 Performance & Impact
 
-![Profile Views](https://komarev.com/ghpvc/?username=MuhammadUsman-Khan&style=for-the-badge&color=00D4FF&label=PROFILE%20VIEWS)
-![GitHub Followers](https://img.shields.io/github/followers/MuhammadUsman-Khan?style=for-the-badge&color=00D4FF&label=FOLLOWERS)
-![GitHub Stars](https://img.shields.io/github/stars/MuhammadUsman-Khan?style=for-the-badge&color=00D4FF&label=TOTAL%20STARS)
+![Profile Views](https://komarev.com/ghpvc/?username=MuhammadUsman-Khan&style=for-the-badge&color=1568c3&label=PROFILE%20VIEWS)
+![GitHub Followers](https://img.shields.io/github/followers/MuhammadUsman-Khan?style=for-the-badge&color=1568c3&label=FOLLOWERS)
+![GitHub Stars](https://img.shields.io/github/stars/MuhammadUsman-Khan?style=for-the-badge&color=1568c3&label=TOTAL%20STARS)
 
 </div>
 
@@ -219,7 +219,8 @@ I believe strong AI systems are built through **consistent learning, experimenta
 
 **Driving Practical ML Solutions • Production-Ready Deployments • Measurable Business Impact**
 
-![Last Updated](https://img.shields.io/badge/Last%20Updated-14%December%2025-00D4FF?style=flat)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-14%20Dec%2025-00D4FF?style=for-the-badge&logo=github&logoColor=white)
+
 
 
 </div>
