@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Generate GitHub Contribution SVG (green boxes only)
+      # 2. Generate GitHub Contribution SVG
       - name: Generate Contribution Graph
         uses: lowlighter/metrics@latest
         with:
@@ -23,9 +23,8 @@ jobs:
           template: classic
           config_display: large
           config_timezone: Asia/Karachi
-          config_output: contribution-graph.svg
           config_theme: dark
-          config_animations: false   # disables any animation
+          config_output: contribution-graph.svg
 
       # 3. Debug: List files to verify SVG exists
       - name: List repository files
@@ -46,3 +45,4 @@ jobs:
             fi
           else
             echo "SVG file not found, skipping commit"
+          fi
