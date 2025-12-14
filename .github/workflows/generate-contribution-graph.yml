@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout the repository
+      # 1. Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -20,14 +20,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: MuhammadUsman-Khan
-          template: classic          # classic template = contribution graph only
+          template: classic
           config_display: large
           config_timezone: Asia/Karachi
-          config_output: contribution-graph.svg
-          config_theme: dark
-          config_animations: false    # disables any animation
-          # Do NOT include plugins like:
-          # plugin_stars, plugin_languages, plugin_habits, plugin_repositories, etc.
+          config_animations: false
+          filename: contribution-graph.svg
 
       # 3. Debug: List files to verify SVG exists
       - name: List repository files
