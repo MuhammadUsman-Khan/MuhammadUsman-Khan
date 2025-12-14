@@ -149,13 +149,10 @@ I believe strong AI systems are built through **consistent learning, experimenta
 
 ---
 
-## 🎨 Contribution Visualization
+## 🟩 Contribution Activity
 
 <div align="center">
-
-![Snake Animation](https://raw.githubusercontent.com/MuhammadUsman-Khan/MuhammadUsman-Khan/output/github-contribution-grid-snake.svg)
-
-
+  <img src="https://raw.githubusercontent.com/MuhammadUsman-Khan/MuhammadUsman-Khan/main/metrics.plugin.isocalendar.svg" />
 </div>
 
 ---
