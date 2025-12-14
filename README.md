@@ -143,7 +143,7 @@ I believe strong AI systems are built through **consistent learning, experimenta
 
 <div align="center">
 
-![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=MuhammadUsman-Khan&theme=dark&no-frame=true&margin-w=20&margin-h=20&row=2&column=4)
+![Github Trophies](https://github-profile-trophy.vercel.app/?username=MuhammadUsman-Khan&theme=transparent&no-frame=false&no-bg=true&margin-w=4)
 
 </div>
 
@@ -153,6 +153,16 @@ I believe strong AI systems are built through **consistent learning, experimenta
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/MuhammadUsman-Khan/MuhammadUsman-Khan/main/github-metrics.svg" />
+</div>
+
+---
+
+### ✍️ Random Dev Quote
+
+<div align="center">
+  
+![Quote](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark)
+
 </div>
 
 ---
