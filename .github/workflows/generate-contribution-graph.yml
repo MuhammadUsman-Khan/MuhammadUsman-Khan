@@ -25,6 +25,9 @@ jobs:
           config_timezone: Asia/Karachi
           config_theme: dark
           config_output: contribution-graph.svg
+          plugin_contributions: yes
+          plugin_contributions_sections: calendar
+
 
       # 3. Debug: List files to verify SVG exists
       - name: List repository files
