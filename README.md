@@ -109,7 +109,8 @@ I approach problems with a balance of **statistical reasoning, model performance
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MuhammadUsman-Khan&layout=compact&theme=dark&hide_border=true&bg_color=0d1117&title_color=00D4FF&text_color=ffffff&langs_count=8)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=MuhammadUsman-Khan&theme=dark&hide_border=true&background=0d1117&stroke=00D4FF&fire=FF6B6B&currStreakLabel=00D4FF)
+![GitHub Streak](https://streak-stats.demolab.com?user=MuhammadUsman-Khan&theme=transparent&hide_border=true)
+
 
 ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=MuhammadUsman-Khan&theme=github-dark&hide_border=true&color=00D4FF&line=00D4FF&point=FFFFFF&area=true&area_color=1f6feb)
 
@@ -144,6 +145,7 @@ I believe strong AI systems are built through **consistent learning, experimenta
 <div align="center">
 
 ![Github Trophies](https://github-profile-trophy.vercel.app/?username=MuhammadUsman-Khan&theme=transparent&no-frame=false&no-bg=true&margin-w=4)
+
 
 </div>
 
