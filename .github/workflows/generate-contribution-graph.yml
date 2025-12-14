@@ -23,11 +23,12 @@ jobs:
           template: classic
           config_display: large
           config_timezone: Asia/Karachi
-          config_output: github-metrics.svg
+          config_theme: dark
+          config_output: contribution-graph.svg
           plugin_habits: yes
           plugin_habits_charts: calendar
           use_mocked_data: yes
-          use_prebuilt_image: false
+
 
 
       # 3. Debug: List files to verify SVG exists
@@ -50,4 +51,3 @@ jobs:
           else
             echo "SVG file not found, skipping commit"
           fi
-
