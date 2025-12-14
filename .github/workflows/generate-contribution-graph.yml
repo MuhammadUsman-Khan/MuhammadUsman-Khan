@@ -27,6 +27,8 @@ jobs:
           config_output: contribution-graph.svg
           plugin_habits: yes
           plugin_habits_charts: calendar
+          use_mocked_data: yes
+
 
 
       # 3. Debug: List files to verify SVG exists
