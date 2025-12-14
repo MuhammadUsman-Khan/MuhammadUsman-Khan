@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Generate GitHub Contribution SVG
+      # 2. Generate GitHub Contribution SVG with forced calendar
       - name: Generate Contribution Graph
         uses: lowlighter/metrics@latest
         with:
@@ -23,19 +23,30 @@ jobs:
           template: classic
           config_display: large
           config_timezone: Asia/Karachi
-          config_theme: dark
           config_output: contribution-graph.svg
+
+          # Enable habits plugin for calendar
           plugin_habits: yes
           plugin_habits_charts: calendar
+
+          # Force calendar rendering even with limited contributions
           use_mocked_data: yes
 
+      # 3. Debug: Print first lines of SVG to verify content
+      - name: Debug: Print first 50 lines of SVG
+        run: |
+          if [ -f contribution-graph.svg ]; then
+            echo "SVG EXISTS — printing first 50 lines"
+            head -n 50 contribution-graph.svg
+          else
+            echo "SVG file not found"
+          fi
 
-
-      # 3. Debug: List files to verify SVG exists
+      # 4. List files to confirm SVG exists
       - name: List repository files
         run: ls -R
 
-      # 4. Commit and push only if file exists
+      # 5. Commit and push SVG if it exists and changed
       - name: Commit contribution graph if exists
         run: |
           if [ -f contribution-graph.svg ]; then
