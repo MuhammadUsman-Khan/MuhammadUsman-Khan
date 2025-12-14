@@ -8,12 +8,13 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
+
     steps:
       # 1. Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Generate GitHub-style Contribution Graph SVG
+      # 2. Generate GitHub Contribution SVG
       - name: Generate Contribution Graph
         uses: lowlighter/metrics@latest
         with:
@@ -22,25 +23,15 @@ jobs:
           template: classic
           config_display: large
           config_timezone: Asia/Karachi
+          config_theme: dark
           config_output: contribution-graph.svg
-          config_twemoji: false
-          config_gemoji: false
-          config_octicon: false
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-          plugin_lines: yes
-          plugin_languages: yes
-          plugin_stars: yes
-          plugin_stars_limit: 10
-          plugin_repositories: yes
-          plugin_habits: yes
 
-      # 3. Debug: list files
+      # 3. Debug: List files to verify SVG exists
       - name: List repository files
         run: ls -R
 
-      # 4. Commit contribution graph if exists
-      - name: Commit SVG if exists
+      # 4. Commit and push only if file exists
+      - name: Commit contribution graph if exists
         run: |
           if [ -f contribution-graph.svg ]; then
             git config --global user.name "github-actions"
@@ -54,3 +45,4 @@ jobs:
             fi
           else
             echo "SVG file not found, skipping commit"
+          fi
