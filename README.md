@@ -152,7 +152,7 @@ I believe strong AI systems are built through **consistent learning, experimenta
 ## 🟩 Contribution Activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/MuhammadUsman-Khan/MuhammadUsman-Khan/main/metrics.plugin.isocalendar.svg" />
+  <img src="https://raw.githubusercontent.com/MuhammadUsman-Khan/MuhammadUsman-Khan/main/github-metrics.svg" />
 </div>
 
 ---
