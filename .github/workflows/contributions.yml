@@ -9,9 +9,11 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout repository
+      # 1. Checkout repository with full history
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0   # important for git commit/push
 
       # 2. Generate Contribution Graph SVG
       - name: Generate Contribution Graph SVG
@@ -27,7 +29,7 @@ jobs:
           config_twemoji: false
           config_gemoji: false
           config_octicon: false
-          config_output: "contribution-graph.svg"   # valid input for output filename
+          config_output: "contribution-graph.svg"
 
       # 3. Commit the generated SVG
       - name: Commit Contribution Graph
