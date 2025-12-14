@@ -1,22 +1,18 @@
 name: Generate Contribution Graph
 
 on:
-  # Manual trigger
-  workflow_dispatch:
-  # Scheduled trigger: daily at midnight
+  workflow_dispatch:   # manual trigger
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # daily at midnight
 
 jobs:
   generate:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Generate GitHub Contribution SVG
       - name: Generate Contribution Graph
         uses: lowlighter/metrics@latest
         with:
@@ -30,12 +26,9 @@ jobs:
           plugin_habits_charts: calendar
           use_mocked_data: no
 
-
-      # 3. Debug: List files to verify SVG exists
       - name: List repository files
         run: ls -R
 
-      # 4. Commit and push only if file exists
       - name: Commit contribution graph if exists
         run: |
           if [ -f contribution-graph.svg ]; then
