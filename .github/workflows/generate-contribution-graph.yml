@@ -28,7 +28,7 @@ jobs:
           plugin_habits: yes
           plugin_habits_charts: calendar
           use_mocked_data: yes
-
+          use_prebuilt_image: false  
 
 
       # 3. Debug: List files to verify SVG exists
