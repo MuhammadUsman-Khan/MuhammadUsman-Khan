@@ -1,9 +1,9 @@
 name: Generate Contribution Graph
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"   # daily at midnight
-  workflow_dispatch:
 
 jobs:
   generate:
