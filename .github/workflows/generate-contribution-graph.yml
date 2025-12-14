@@ -27,6 +27,7 @@ jobs:
           config_output: contribution-graph.svg
           plugin_contributions: yes
           plugin_contributions_sections: calendar
+          plugin_contributions_calendar: yes
 
 
       # 3. Debug: List files to verify SVG exists
