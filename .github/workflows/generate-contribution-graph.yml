@@ -2,7 +2,7 @@ name: Generate Contribution Graph
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # runs daily at midnight UTC
+    - cron: "0 0 * * *" # Runs daily at 00:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -10,48 +10,46 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository with full history
+      # 1️⃣ Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # Needed for Git commit & push
 
-      # Step 2: Set up Node (required by lowlighter)
+      # 2️⃣ Setup Node (required by lowlighter plugin)
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: '20'
 
-      # Step 3: Generate contribution graph
-      - name: Generate Contribution Graph
+      # 3️⃣ Generate GitHub contribution SVG
+      - name: Generate Contribution Graph SVG
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: MuhammadUsman-Khan
           template: classic
+          base: ""
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           config_timezone: Asia/Karachi
           config_display: large
-          config_animations: no
-          config_output: "contribution-graph.svg"
+          config_animations: false  # Disable animations for static SVG
+          config_output: contribution-graph.svg  # Explicit output filename
 
-      # Step 4: Verify file exists (optional)
-      - name: List files
-        run: ls -la
-
-      # Step 5: Configure Git
-      - name: Configure Git
+      # 4️⃣ Configure Git
+      - name: Setup Git
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      # Step 6: Commit changes only if graph changed
-      - name: Commit Contribution Graph
+      # 5️⃣ Add and commit changes only if they exist
+      - name: Commit contribution graph if changed
         run: |
           git add contribution-graph.svg
-          git diff-index --quiet HEAD || git commit -m "Update contribution graph"
-
-      # Step 7: Push changes
-      - name: Push changes
-        run: git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Update contribution graph"
+            git push origin HEAD
+          else
+            echo "No changes to commit"
+          fi
