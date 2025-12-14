@@ -2,7 +2,7 @@ name: Generate Contribution Graph
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # daily at midnight
+    - cron: "0 0 * * *"  # daily at midnight
   workflow_dispatch:
 
 jobs:
@@ -14,8 +14,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Generate GitHub Contribution SVG
-      - name: Generate Contribution Graph
+      # 2. Generate enriched contribution SVG
+      - name: Generate Contribution Graph with Metrics
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -25,6 +25,16 @@ jobs:
           config_timezone: Asia/Karachi
           config_theme: dark
           config_output: contribution-graph.svg
+
+          # ✅ Plugins for extra metrics
+          plugin_contributors: true
+          plugin_languages: true
+          plugin_stars: true
+          plugin_stargazers: true
+          plugin_lines: true
+          plugin_repositories: true
+          plugin_followup: true
+          plugin_habits: true
 
       # 3. Debug: List files to verify SVG exists
       - name: List repository files
@@ -45,4 +55,3 @@ jobs:
             fi
           else
             echo "SVG file not found, skipping commit"
-          fi
