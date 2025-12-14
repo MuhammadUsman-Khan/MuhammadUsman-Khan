@@ -1,9 +1,11 @@
 name: Generate Contribution Graph
 
 on:
-  schedule:
-    - cron: "0 0 * * *"   # daily at midnight
+  # Manual trigger
   workflow_dispatch:
+  # Scheduled trigger: daily at midnight
+  schedule:
+    - cron: "0 0 * * *"
 
 jobs:
   generate:
@@ -27,9 +29,7 @@ jobs:
           config_output: contribution-graph.svg
           plugin_habits: yes
           plugin_habits_charts: calendar
-          use_mocked_data: yes
-
-
+          use_mocked_data: no   # ✅ Use real contribution data
 
       # 3. Debug: List files to verify SVG exists
       - name: List repository files
@@ -50,4 +50,3 @@ jobs:
             fi
           else
             echo "SVG file not found, skipping commit"
-          fi
