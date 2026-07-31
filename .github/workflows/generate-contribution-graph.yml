@@ -15,19 +15,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Generate GitHub Contribution SVG
+     # 2. Generate GitHub Contribution SVG
       - name: Generate Contribution Graph
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: MuhammadUsman-Khan
           template: classic
+          base: header, activity, community, repositories
           config_display: large
           config_timezone: Asia/Karachi
-          config_theme: dark
-          config_output: contribution-graph.svg
-          plugin_habits_charts: calendar
-          use_mocked_data: no
+          config_output: svg
+          filename: github-metrics.svg
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          plugin_languages: yes
+          plugin_languages_limit: 8
 
 
 
@@ -38,10 +41,10 @@ jobs:
       # 4. Commit and push only if file exists
       - name: Commit contribution graph if exists
         run: |
-          if [ -f contribution-graph.svg ]; then
+          if [ -f github-metrics.svg ]; then
             git config --global user.name "github-actions"
             git config --global user.email "github-actions@github.com"
-            git add contribution-graph.svg
+            git add github-metrics.svg
             if ! git diff --cached --quiet; then
               git commit -m "Update contribution graph"
               git push origin HEAD
