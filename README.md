@@ -14,6 +14,7 @@
 ### ✨ Machine Learning • Data Analysis • AI Solutions
 
 <img src="githubgif.gif" alt="Lofi Coder Banner" width="60%"/>
+
 ---
 
 ## 📊 Performance & Impact
