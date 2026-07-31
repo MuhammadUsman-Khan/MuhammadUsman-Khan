@@ -6,10 +6,14 @@
 
 **Transforming Data into Intelligent Solutions**
 
+
+
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=28&duration=4000&pause=1000&color=00D4FF&center=true&vCenter=true&width=1000&height=70&lines=Python+%7C+TensorFlow+%7C+Scikit--learn+Expert;FastAPI+%7C+Flask+Backend+Developer;RAG+Chatbot+%7C+Computer+Vision;Production+ML+Deployment+Specialist" alt="Typing Animation" />
+
 
 ### ✨ Machine Learning • Data Analysis • AI Solutions
 
+<img src="githubgif.gif" alt="Lofi Coder Banner" width="60%"/>
 ---
 
 ## 📊 Performance & Impact
